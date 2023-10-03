@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>MakeUrMeme</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="newstyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+    <div class="memePage">
+
+        <form class="memeForm">
+
+            <h1>Make UR Meme</h1>
+
+            <label for="mediaLink">
+                <input  type="text"
+                        name="newImage"
+                        placeholder="GIF/Img Link Please..."
+                        id="mediaLink"
+                        class="newMediaLink"
+                >
+            </label>
+
+            <br>
+
+            <label for="userTopInput">
+                <input  type="text"
+                        name="topSentence"
+                        maxlength="24"
+                        placeholder="Top Message"
+                        id="userTopInput"
+                        class="newUserTopMsg"
+                >
+            </label>
+
+            <br>
+
+            <label for="userBottomInput">
+                <input  type="text"
+                        name="bottomSentence"
+                        maxlength="24"
+                        placeholder="Bottom Message"
+                        id="userBottomInput"
+                        class="newUserBtmMsg"
+                >
+            </label>
+
+            <br>
+
+            <div>
+            <button class="submitBtn"
+                    type="submit"
+                    id="memeMixer"
+                > MEME MIXER
+            </button>
+            </div>
+            
+            <div>
+            <button class="scrlUp">&uarr;</button>
+            </div>
+
+        </form>
+
+
+
+
+    </div>
+
+<script src="newapp.js"></script>
+</body>
+
+</html>
