@@ -1,24 +1,40 @@
+//SELECTORS---------------------------------------------
+
 const memePageForm = document.querySelector(".memeForm");
 const memeMixerBtn = document.querySelector(".submitBtn");
 const scrollUpBtn = document.querySelector(".scrlUp")
-const newImg = document.querySelector(".newMediaLink");
-const topMsg = document.querySelector(".newUserTopMsg");
-const btmMsg = document.querySelector(".newUserBtmMsg");
+const newImg = document.querySelector("#mediaLink");
+const topMsg = document.querySelector("#userTopInput");
+const btmMsg = document.querySelector("#userBtmInput");
 
 
-//ARRAY to insert user memes input-------------------------
+// MEME MIXER BUTTON - this button prevents default and console log all inputs---------------------------------
+
+memeMixerBtn.addEventListener("click", function(e){
+    e.preventDefault();
+    // console.log(newImg.value, topMsg.value, btmMsg.value);
+});
+
+//ARRAY to insert user memes input----------------------
 
 const userMemes = [];
 
+// USER VALUES:
 
+// img.src 
+newImg.value
+// top message
+topMsg.value
+// bottom message
+btmMsg.value
 
-// MEME MIXER BUTTON - CONSOLE LOG AND PREVENTING DEFAULT ---------------
+//FUNCTION to add image from link to array (top and btm msg not included)
 
-memeMixerBtn.addEventListener("click", function(e){
-    e.preventDefault()
-    console.log(e);
-});
+function addingImages() {
 
+    
+
+}
 
 
 //SCROLL UP BUTTON -----------------------------------------------------------------------
@@ -30,27 +46,3 @@ scrollUpBtn.addEventListener("click", function(){
     });
 });
 
-
-
-// memePageForm.addEventListener("submit", function(e){
-//     e.preventDefault();
-// })
-
-//     if (newImg.value == "" || topMsg.value == "" || btmMsg.value == "") {
-//     alert ("No value in any fields");
-// };
-
-
-// This function renders a new user new image into a "transparent card", add top and bottom input text into image, append it into html structure ------------------------
-
-
-function makingMemeBox(userMemes) {
-
-    for (let i =o; i < userMemes.length; i++){
-
-        const newBlock = document.createElement("div");
-        newCard.classList.add("cardModel");
-
-    }
-
-};
