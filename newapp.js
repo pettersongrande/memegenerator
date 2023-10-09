@@ -1,9 +1,9 @@
 //SELECTORS---------------------------------------------
 
 const memePageForm = document.querySelector(".memeForm");
-const memesDisplay = document.querySelector(".urMemesDisplay");
+const memesDisplay = document.querySelector(".urmemesDisplay");
 const memeMixerBtn = document.querySelector(".submitBtn");
-const scrollUpBtn = document.querySelector(".scrlUp")
+const scrollUpBtn = document.querySelector(".scrlUp");
 const imgLink = document.querySelector("input[name='newImageLink']");
 const topMsg = document.querySelector("input[name='topSentence']");
 const btmMsg = document.querySelector("input[name='bottomSentence']");
@@ -17,45 +17,61 @@ const btmMsg = document.querySelector("input[name='bottomSentence']");
 const userMemes = [];
 
 
-//FUNCTION TO grab link and create new card
+//THIS FUNCTION grabs the user img url, creates a card and pushes into the userMemes array.
 
 
-function userMeme(userLink){
-
+function userMeme(userLink, userTopMsg, userBtmMsg){
+    
     const newCard = document.createElement("div");
-    newCard.classList.add("cardModel");
-    newCard.style.backgroundImage = `url(${userLink})`;
-    userMemes.push(newCard)
+    const topSubt = document.createElement("p");
+    const btmSubt = document.createElement("p");
+        topSubt.classList.add("topTxt");
+        topSubt.innerHTML = userTopMsg;
+        newCard.append(topSubt);
+
+        btmSubt.classList.add("btmTxt");
+        btmSubt.innerHTML = userBtmMsg;
+        newCard.append(btmSubt);
+
+        newCard.classList.add("cardModel");
+        newCard.style.backgroundImage = `url(${userLink})`;
+        
+    // userMemes.push(newCard);
 
     return newCard;
+    
+};
 
-}
 
 
-
-// MEME PAGE FORM this function prevents default, scroll user view to new memes section, submits a form inside the memeForm division.
+// MEME PAGE FORM this function prevents default, scroll user view to new memes section, submits the form inside the memeForm division.
 
 
 memePageForm.addEventListener("submit", function(event){
 
     event.preventDefault();
-    if (imgLink.value === "") {
 
-        window.alert("Meme Mixer will only work with a link!")  
+        if (imgLink.value === "") {
+
+            window.alert("Meme Mixer doesn't work without your links!")  
         
     }
 
-    else {
-    memesDisplay.scrollIntoView({
+        else {
+            memesDisplay.scrollIntoView({
             behavior: "smooth",
     });
-    const newMeme = userMeme(imgLink.value);
-    memesDisplay.appendChild(newMeme);
-    imgLink.value = '';
+
+    const newMeme = userMeme(imgLink.value, topMsg.value, btmMsg.value);
+            userMemes.push(newMeme);
+            memesDisplay.appendChild(newMeme);
+            // console.log(userMemes)
+            imgLink.value = '';
+            topMsg.value = '';
+            btmMsg.value = '';
     }
 
 });
-
 
 
 //SCROLL UP BUTTON -----------------------------------------------------------------------

@@ -1,17 +1,18 @@
 /* PAGE STRUCTURE */
 
 
-/*  PAGE 1 intro container & its FORM---------------------------------------------------------------*/
+/*  PAGE 1 intro container/FORM/INPUT STYLING -----------------------------------------------------*/
 
 .intro {
-
+  margin: auto;
+  border: hidden;
   width: 75vw;
   height: 85vh;
   padding: 1em 10em 5em 10em;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* border-style: dotted; */
+  
   
 }
 
@@ -29,10 +30,55 @@
   }
 
 
+  input {
+
+    width: 60em;
+    height: 3em;
+    border-radius: 1em;
+    border-style: solid;
+    text-align: center;
+    color: #851b96;
+    font-family: "Tenor Sans", sans-serif;
+
+  }
+
+  @media (max-width: 1000px) {
+
+    .intro {
+      margin: auto;
+      border: hidden;
+      width: 75vw;
+      height: 85vh;
+      padding: 1em 10em 5em 10em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      
+    }
+
+    input {
+
+      width: 60em;
+      height: 3em;
+      border-radius: 1em;
+      border-style: solid;
+      text-align: center;
+      color: #851b96;
+      font-family: "Tenor Sans", sans-serif;
+  
+    }
+
+
+
+  }
+
 /* PAGE 2 page itself and grid space to receive new memes */
 
 .memesScreen {
 
+  margin: auto;
+  border: hidden;
   width: 75vw;
   height: 85vh;
   padding: 1em 10em 5em 10em;
@@ -43,19 +89,72 @@
 
 }
 
+/* .pageTitle {
+  
+  border: hidden;
+  width: 75vw;
+  height: 15vh;
+  padding: 1em 5em 5em 5em;
 
-.memesDisplay {
+} */
+
+
+.urmemesDisplay {
 
   width: 75vw;
   height: 85vh;
   padding: 1em;
   display: grid;
   gap: 3rem;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   /* border-style:dashed; */
 
 
 }
+
+
+@media (max-width: 1000px) {
+
+  .memesScreen {
+
+    margin: auto;
+    border: hidden;
+    width: auto;
+    height: auto;
+    padding: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border-style: groove; */
+  
+  }
+  
+  /* .pageTitle {
+    
+    border: hidden;
+    width: 75vw;
+    height: 15vh;
+    padding: 1em 5em 5em 5em;
+  
+  } */
+  
+  
+  .urmemesDisplay {
+  
+    width: 10vw;
+    height: 20vh;
+    padding: 1em;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+    /* border-style:dashed; */
+  
+  
+  }
+
+
+}
+
 
   
   /* STYLING letters  BUTTONS AND TITLES -------------------------------------------------------- */
@@ -119,36 +218,14 @@ h1, h2 {
   
   }
 
-  /* INPUTS STYLING ---------------------------------- */
+/* VIRTUAL MODELS TO BE ATTACHED */
 
 
-  input {
-
-    width: 60em;
-    height: 3em;
-    border-radius: 1em;
-    border-style: solid;
-    text-align: center;
-    color: #851b96;
-    font-family: "Tenor Sans", sans-serif;
-
-  }
-
-/* CARDS --------------------------------------------- */
-  .memeGrid {
-
-    width: 100vw;
-    height: 100vh;
-    padding: 1em;
-    display: grid;
-    gap: 3rem;
-    grid-template-columns: repeat(5, 1fr);
-  
-  }
+/* CARD MODEL TO ATTACH IMAGE -------------------------------------- */
 
   .cardModel {
 
-  position: absolute;
+  position: relative;
   border: 1px solid black;
   border-radius: 10%;
   width: 20vw;
@@ -161,6 +238,28 @@ h1, h2 {
   cursor: pointer;
      
   }
+
+  /* TEXT BLOCK MODEL*/
+
+  .topTxt {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    font: caption;
+    font-weight: bold;
+    
+  }
+  
+  .btmTxt {
+      position: relative;
+      text-align: center;
+      justify-content: center;
+      top: 65%;
+      color: white;
+      font: caption;
+      font-weight: bold;
+    }
 
 
 
