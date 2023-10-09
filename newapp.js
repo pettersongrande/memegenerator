@@ -4,84 +4,64 @@ const memePageForm = document.querySelector(".memeForm");
 const memesDisplay = document.querySelector(".urMemesDisplay");
 const memeMixerBtn = document.querySelector(".submitBtn");
 const scrollUpBtn = document.querySelector(".scrlUp")
-const newImg = document.querySelector("#mediaLink");
-const topMsg = document.querySelector("#userTopInput");
-const btmMsg = document.querySelector("#userBtmInput");
+const imgLink = document.querySelector("input[name='newImageLink']");
+const topMsg = document.querySelector("input[name='topSentence']");
+const btmMsg = document.querySelector("input[name='bottomSentence']");
 
+//USER INPUTS:
 
-// MEME PAGE FORM this function prevents default, scroll user view to new memes section, submits a form inside the memeForm division.
-
-memePageForm.addEventListener("submit", function(event){
-
-    event.preventDefault();
-    memesDisplay.scrollIntoView({
-        behavior: "smooth",
-    });
-    addIMG(newImg.value);       
-
-});
-
-
+// console.log any of these  or use these info: imgLink.value || topMsg.value || btmMsg.value 
 
 //ARRAY to insert user memes input----------------------
 
 const userMemes = [];
 
-//FUNCTION TO ADD IMAGE INTO userMemesArray 
 
-function addIMG (url) {
-    
-    let img = document.createElement("img");
-    img.src = url;
-    document.body.appendChild(img);
-    userMemes.push(img);
-    newImg.value = "";
+//FUNCTION TO grab link and create new card
 
-    //creating card
+
+function userMeme(userLink){
 
     const newCard = document.createElement("div");
     newCard.classList.add("cardModel");
-    newCard.dataset.imgName = userMemes[i];    
+    newCard.style.backgroundImage = `url(${userLink})`;
+    userMemes.push(newCard)
 
-};
-
-function topSentence (string) {
-
-    let newTopSentence = document.createElement("li");
-    
-
+    return newCard;
 
 }
 
 
 
+// MEME PAGE FORM this function prevents default, scroll user view to new memes section, submits a form inside the memeForm division.
 
-// USER VALUES:
 
-// img.src 
-newImg.value
-// top message
-topMsg.value
-// bottom message
-btmMsg.value
+memePageForm.addEventListener("submit", function(event){
 
-//FUNCTION to add image from link to array (top and btm msg not included)
+    event.preventDefault();
+    if (imgLink.value === "") {
 
-let link = newImg.value;
-if (link !== "") {
+        window.alert("Meme Mixer will only work with a link!")  
+        
+    }
 
-let newImg = document.createElement("img");
-Image.src = `"${link}"`;
-};
+    else {
+    memesDisplay.scrollIntoView({
+            behavior: "smooth",
+    });
+    const newMeme = userMeme(imgLink.value);
+    memesDisplay.appendChild(newMeme);
+    imgLink.value = '';
+    }
+
+});
 
 
 
 //SCROLL UP BUTTON -----------------------------------------------------------------------
 scrollUpBtn.addEventListener("click", function(){
-    window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: "smooth",
+    memePageForm.scrollIntoView({
+    behavior: "smooth",
     });
 });
 

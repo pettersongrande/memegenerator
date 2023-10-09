@@ -74,7 +74,7 @@ h1, h2 {
     font-size: 3rem;
     font-family: "Tenor Sans", sans-serif;
     font-weight: bold;
-    font-size: 8em;
+    font-size: 7em;
     text-align: center;
   
   }
@@ -104,18 +104,18 @@ h1, h2 {
   
   .scrlUp {
   
-    font-size: 1.2em;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    background-color: #ef476f;
     position: fixed;
-    right: 10px;
-    bottom: 10px;
-    width: 50px;
-    height: 50px;
+    bottom: 10%;
+    right: 10%;
+    border: 2px solid #fff;
     border-radius: 50%;
-    background: #0000ff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-    color: #ffffff;
-    outline: none;
-    cursor: pointer;
+    font: bold 20px monospace;
+    transition: opacity 0.5s, transform 0.5s;
+
   
   }
 
@@ -147,19 +147,24 @@ h1, h2 {
   }
 
   .cardModel {
-    position: relative;
-    border: 1px solid black;
-    border-radius: 10%;
-    width: 80%;
-    height: 220px;
-    background-position: center;
-    background-size: contain;
-    border-color: #FFD700;
-    border-width: 2px;
+
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 10%;
+  width: 20vw;
+  height: 30vh;
+  background-position: center;
+  background-size: cover;
+  border-color: #ef476f;
+  border-width: 2px;
+  backface-visibility: hidden;
+  cursor: pointer;
      
   }
 
-  
+
+
+  /* MAKE BUTTON SHAKE IN CASE USER DOES NOT ADD INPUTS */
   @keyframes horizontal-shaking {
   0% { transform: translateX(0) }
   25% { transform: translateX(5px) }
