@@ -25,6 +25,7 @@ function userMeme(userLink, userTopMsg, userBtmMsg){
     const newCard = document.createElement("div");
     const topSubt = document.createElement("p");
     const btmSubt = document.createElement("p");
+    const newBtn = document.createElement("button");
         topSubt.classList.add("topTxt");
         topSubt.innerHTML = userTopMsg;
         newCard.append(topSubt);
@@ -35,6 +36,10 @@ function userMeme(userLink, userTopMsg, userBtmMsg){
 
         newCard.classList.add("cardModel");
         newCard.style.backgroundImage = `url(${userLink})`;
+
+        newBtn.innerHTML = "&#x1F5D1";
+        newBtn.classList.add("deleteBtn");
+        newCard.append(newBtn);
         
     // userMemes.push(newCard);
 
@@ -69,9 +74,29 @@ memePageForm.addEventListener("submit", function(event){
             imgLink.value = '';
             topMsg.value = '';
             btmMsg.value = '';
+
     }
 
 });
+
+//DELETE BUTTON------------------------------------------------
+
+
+
+
+
+// removeButtons.addEventListener("click", function(e) {
+//     e.target.parentElement.remove();
+// })
+
+const removeButtons = document.querySelectorAll("div .deleteBtn");
+
+for (let btn of removeButtons) {
+    btn.addEventListener("click", function(e) {
+        console.log(e)
+        // e.target.parentElement.remove();
+    });
+};
 
 
 //SCROLL UP BUTTON -----------------------------------------------------------------------
