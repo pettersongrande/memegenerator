@@ -106,6 +106,9 @@ h1, h2 {
   }
 
 
+  /* webkit colouring css instructions was copied from Sarah Fossheim website https://fossheim.io/writing/posts/css-text-gradient/#:~:text=To%20add%20a%20gradient%20overlay%20to%20a%20text%20element%2C%20we,text%2Dfill%2Dcolor%3A%20transparent */
+
+
 
 
   .submitBtn {
@@ -167,7 +170,7 @@ h1, h2 {
 }
 
 
-/* VIRTUAL MODELS TO BE ATTACHED */
+/* VIRTUAL MODELS TO BE ATTACHED by JS FUNCTION*/
 
 
 /* CARD MODEL TO ATTACH IMAGE -------------------------------------- */
@@ -211,16 +214,3 @@ h1, h2 {
       font-weight: bold;
       overflow-wrap: break-word;
     }
-
-
-
-  /* MAKE BUTTON SHAKE IN CASE USER DOES NOT ADD INPUTS */
-  @keyframes horizontal-shaking {
-  0% { transform: translateX(0) }
-  25% { transform: translateX(5px) }
-  50% { transform: translateX(-5px) }
-  75% { transform: translateX(5px) }
-  100% { transform: translateX(0) }
-  }
-
-  
