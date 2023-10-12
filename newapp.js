@@ -39,7 +39,11 @@ function userMeme(userLink, userTopMsg, userBtmMsg){
 
         newBtn.innerHTML = "&#x1F5D1";
         newBtn.classList.add("deleteBtn");
+        newBtn.addEventListener("click", function(e) {
+            e.target.parentElement.remove();
+        });
         newCard.append(newBtn);
+
         
     // userMemes.push(newCard);
 
@@ -81,22 +85,18 @@ memePageForm.addEventListener("submit", function(event){
 
 //DELETE BUTTON------------------------------------------------
 
-
-
-
-
-// removeButtons.addEventListener("click", function(e) {
-//     e.target.parentElement.remove();
+// document.addEventListener("click", function (e){
+//     console.log(e);
 // })
 
-const removeButtons = document.querySelectorAll("div .deleteBtn");
+// const removeButtons = document.querySelectorAll("button.deleteBtn");
 
-for (let btn of removeButtons) {
-    btn.addEventListener("click", function(e) {
-        console.log(e)
-        // e.target.parentElement.remove();
-    });
-};
+// for (let btn of removeButtons) {
+//     btn.addEventListener("click", function(e) {
+//         console.log("You Clicked Remove")
+//         // e.target.parentElement.remove();
+//     });
+// };
 
 
 //SCROLL UP BUTTON -----------------------------------------------------------------------

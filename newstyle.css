@@ -106,6 +106,8 @@ h1, h2 {
   }
 
 
+
+
   .submitBtn {
 
     width: 15em;
@@ -125,8 +127,10 @@ h1, h2 {
   
   button:hover {
     cursor: pointer;
-    background-color: #851b96;
+    background-color: #ef476f;
   }
+
+
   
   .scrlUp {
   
@@ -148,13 +152,14 @@ h1, h2 {
   /* delete button  */
 
 .deleteBtn {
-  position: relative;
+  color: white;
+  position: absolute;
   left: 90%;
-  top: 55%;
-  width: 20px;
-  height: 20px;
+  top: 85%;
+  width: 24px;
+  height: 24px;
   /* color: #fff; */
-  background-color: none;
+  background-color: transparent;
   border: hidden;
   border-radius: 50%;
   font: bold 15px monospace;
@@ -192,6 +197,7 @@ h1, h2 {
     color: white;
     font: caption;
     font-weight: bold;
+    overflow-wrap: break-word;
     
   }
   
@@ -199,10 +205,11 @@ h1, h2 {
       position: relative;
       text-align: center;
       justify-content: center;
-      top: 65%;
+      top: 63%;
       color: white;
       font: caption;
       font-weight: bold;
+      overflow-wrap: break-word;
     }
 
 
