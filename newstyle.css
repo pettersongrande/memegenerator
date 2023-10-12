@@ -127,6 +127,12 @@ h1, h2 {
     
   
   }
+
+  .submitBtn.error {
+
+    animation: wiggle 0.15s infinite;
+
+  }
   
   button:hover {
     cursor: pointer;
@@ -214,3 +220,13 @@ h1, h2 {
       font-weight: bold;
       overflow-wrap: break-word;
     }
+
+    @keyframes wiggle {
+      0% { transform: translateX(0) }
+      25% { transform: translateX(5px) }
+      50% { transform: translateX(-5px) }
+      75% { transform: translateX(5px) }
+      100% { transform: translateX(0) }
+     }
+
+   /* key frames for horizontal shaking used from https://unused-css.com/blog/css-shake-animation/  */

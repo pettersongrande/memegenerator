@@ -62,7 +62,10 @@ memePageForm.addEventListener("submit", function(event){
 
         if (imgLink.value === "") {
 
-            window.alert("Meme Mixer doesn't work without your links!")  
+            memeMixerBtn.classList.add("error");
+            setTimeout(function(){
+                memeMixerBtn.classList.remove("error");
+            }, 500);
         
     }
 
