@@ -86,21 +86,6 @@ memePageForm.addEventListener("submit", function(event){
 
 });
 
-//DELETE BUTTON------------------------------------------------
-
-// document.addEventListener("click", function (e){
-//     console.log(e);
-// })
-
-// const removeButtons = document.querySelectorAll("button.deleteBtn");
-
-// for (let btn of removeButtons) {
-//     btn.addEventListener("click", function(e) {
-//         console.log("You Clicked Remove")
-//         // e.target.parentElement.remove();
-//     });
-// };
-
 
 //SCROLL UP BUTTON -----------------------------------------------------------------------
 scrollUpBtn.addEventListener("click", function(){
