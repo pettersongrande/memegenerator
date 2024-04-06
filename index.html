@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>MakeUrMeme</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="newstyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+    href="https://unpkg.com/jasmine-core/lib/jasmine-core/jasmine.css" />
+    
+</head>
+<body>
+
+    <div class="intro">
+
+        <form   class="memeForm">
+
+            <h1>Make UR Meme</h1>
+
+            <p>
+            <label for="mediaLink">
+                <input  type="url"
+                        name="newImageLink"
+                        placeholder="Paste Your Media Link Here!"
+                        id="mediaLink"
+                    >
+            </label>
+            </p>
+
+            <p>
+            <label for="userTopInput">
+                <input  type="text"
+                        name="topSentence"
+                        maxlength="45"
+                        placeholder="Top Message"
+                        id="userTopInput"
+                    >
+            </label>
+            </p>
+
+            <p>
+            <label for="userBtmInput">
+                <input  type="text"
+                        name="bottomSentence"
+                        maxlength="45"
+                        placeholder="Bottom Message"
+                        id="userBtmInput"
+                    >
+            </label>
+            </p>
+            
+            <div>
+            <button class="submitBtn"
+                    type="submit"
+                > MEME MIXER
+            </button>
+            </div>
+
+        </form>
+
+    </div>
+
+    <section    class="memesScreen">
+        <div class="pageTitle">
+            <h2> uR'Memes</h2>
+        </div>
+
+        <span    class="urmemesDisplay">
+
+            <!-- <button class="deleteBtn">	
+                &#x1F5D1;</button> -->
+        </span>
+
+        <div>
+            <button class="scrlUp">&uarr;</button>
+        </div>
+    
+    </section>
+
+    <script 
+    src="https://unpkg.com/jasmine-core/lib/jasmine-core/jasmine.js"></script>
+    <script 
+    src="https://unpkg.com/jasmine-core/lib/jasmine-core/jasmine-html.js"></script>
+    <script 
+    src= "https://unpkg.com/jasmine-core/lib/jasmine-core/boot.js"></script>
+    <script src="newapp.js"></script>
+    <script src="newapp.test.js"></script>
+</body>
+
+</html>

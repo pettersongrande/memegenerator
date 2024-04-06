@@ -1,0 +1,232 @@
+/* PAGE STRUCTURE */
+
+
+/*  PAGE 1 intro container/FORM/INPUT STYLING -----------------------------------------------------*/
+
+.intro {
+  margin: auto;
+  border: hidden;
+  width: 75vw;
+  height: 85vh;
+  padding: 1em 10em 5em 10em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  
+}
+
+
+.memeForm {
+
+    width: 70vw;
+    height: 90vh;
+    padding: 1em 5em 5em 10em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border-style: dotted; */
+    
+  }
+
+
+  input {
+
+    width: 60em;
+    height: 3em;
+    border-radius: 1em;
+    border-style: solid;
+    text-align: center;
+    color: #851b96;
+    font-family: "Tenor Sans", sans-serif;
+
+  }
+
+
+/* PAGE 2 page itself and grid space to receive new memes */
+
+.memesScreen {
+
+  margin: auto;
+  border: hidden;
+  width: 75vw;
+  height: 85vh;
+  padding: 1em 10em 5em 10em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border-style: groove; */
+
+}
+
+/* .pageTitle {
+  
+  border: hidden;
+  width: 75vw;
+  height: 15vh;
+  padding: 1em 5em 5em 5em;
+
+} */
+
+
+.urmemesDisplay {
+
+  width: 75vw;
+  height: 85vh;
+  padding: 1em;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(3, 1fr);
+  /* border-style:dashed; */
+
+
+}
+
+
+  
+  /* STYLING letters  BUTTONS AND TITLES -------------------------------------------------------- */
+
+h1, h2 {
+    /* page Title */
+    /* color: ; */
+    background-color: rgb(63,94,251);
+    background-image: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    font-size: 3rem;
+    font-family: "Tenor Sans", sans-serif;
+    font-weight: bold;
+    font-size: 7em;
+    text-align: center;
+  
+  }
+
+
+  /* webkit colouring css instructions was copied from Sarah Fossheim website https://fossheim.io/writing/posts/css-text-gradient/#:~:text=To%20add%20a%20gradient%20overlay%20to%20a%20text%20element%2C%20we,text%2Dfill%2Dcolor%3A%20transparent */
+
+
+
+
+  .submitBtn {
+
+    width: 15em;
+    height: 3em;
+    background-color: #0000ff;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 0.5em;
+    padding: 1em;
+    font-size: 1.2rem;
+    font-family: "Tenor Sans", sans-serif;
+    font-weight: bold;
+    
+  
+  }
+
+  .submitBtn.error {
+
+    animation: wiggle 0.15s infinite;
+
+  }
+  
+  button:hover {
+    cursor: pointer;
+    background-color: #ef476f;
+  }
+
+
+  
+  .scrlUp {
+  
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    background-color: #ef476f;
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    font: bold 20px monospace;
+    transition: opacity 0.5s, transform 0.5s;
+
+  
+  }
+
+  /* delete button  */
+
+.deleteBtn {
+  color: white;
+  position: absolute;
+  left: 90%;
+  top: 85%;
+  width: 24px;
+  height: 24px;
+  /* color: #fff; */
+  background-color: transparent;
+  border: hidden;
+  border-radius: 50%;
+  font: bold 15px monospace;
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+
+/* VIRTUAL MODELS TO BE ATTACHED by JS FUNCTION*/
+
+
+/* CARD MODEL TO ATTACH IMAGE -------------------------------------- */
+
+  .cardModel {
+
+  position: relative;
+  border: 1px solid black;
+  border-radius: 10%;
+  width: 20vw;
+  height: 30vh;
+  background-position: center;
+  background-size: cover;
+  border-color: #ef476f;
+  border-width: 2px;
+  backface-visibility: hidden;
+  cursor: pointer;
+     
+  }
+
+  /* TEXT BLOCK MODEL*/
+
+  .topTxt {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    font: caption;
+    font-weight: bold;
+    overflow-wrap: break-word;
+    
+  }
+  
+  .btmTxt {
+      position: relative;
+      text-align: center;
+      justify-content: center;
+      top: 63%;
+      color: white;
+      font: caption;
+      font-weight: bold;
+      overflow-wrap: break-word;
+    }
+
+    @keyframes wiggle {
+      0% { transform: translateX(0) }
+      25% { transform: translateX(5px) }
+      50% { transform: translateX(-5px) }
+      75% { transform: translateX(5px) }
+      100% { transform: translateX(0) }
+     }
+
+   /* key frames for horizontal shaking used from https://unused-css.com/blog/css-shake-animation/  */
